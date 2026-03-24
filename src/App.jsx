@@ -1,12 +1,15 @@
+//npm install react-router 
 import './App.css'
-import HomePage from './_Features/HomePage/HomePage'
+
+import { RouterProvider } from "react-router-dom"
+import router from "./Routers/main_R";
 
 function App() {
-  
+
   return (
-<>
-<HomePage />
-</>
+    <>
+        <RouterProvider router={router} />
+    </>
   )
 }
 
