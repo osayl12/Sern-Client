@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router";
 import EmptyLayout from "../LayOut/EmptyLayout";
 import HomePage from "../_Features/HomePage/HomePage.jsx";
 import About from "../_Features/About/About.jsx";
-import LangList from "../_Features/Language/LangList.js";
+import LangList from "../_Features/Language/LangList.jsx";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import LanguageIcon from "@mui/icons-material/Language";
