@@ -1,20 +1,19 @@
 import React from "react";
-import { createBrowserRouter } from "react-router-dom";
+import {createBrowserRouter} from "react-router";
 import EmptyLayout from "../LayOut/EmptyLayout";
 import HomePage from "../_Features/HomePage/HomePage.jsx";
-import AboutPage from "../_Features/About/About.jsx";
+import About from "../_Features/About/About.jsx";
+import LangList from "../_Features/Language/LangList.jsx";
+
 const router = createBrowserRouter([
     {
         element:<EmptyLayout />,
         children:[
             {path:"/",         element:<HomePage />,     },
-            {path:"/home",     element:<HomePage />,     },
+            {path:"/About",     element:<About />,     },
+            {path:"/Lang",     element:<LangList />,     },
         ]
     },
-    {
-        path:"/about",
-        element:<AboutPage />
-    }
 ]);
 
 // import HomeIcon from '@mui/icons-material/Home';
