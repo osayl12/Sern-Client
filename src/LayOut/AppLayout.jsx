@@ -1,11 +1,11 @@
-import React, { useState,useMemo } from 'react'; // Add useState import
+import React, { useState, useMemo } from 'react';
 import Header from "./Header";
 import NavBar from "./NavBar";
 import Footer from "./Footer.jsx";
 import { Outlet, useMatches } from "react-router";
-import { Box, Typography } from '@mui/material';
-import {menuWidth, HeaderHeight, FooterHeight, FooterBgColor, HeaderBgColor} from "../theme_params.jsx";
-import {PageTitle} from "../vars.jsx";
+import { Box } from '@mui/material';
+import { menuWidth, HeaderHeight, FooterHeight, HeaderBgColor } from "../theme_params.jsx";
+import { PageTitle } from "../vars.jsx";
 
 function AppLayout() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -14,8 +14,9 @@ function AppLayout() {
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
+
     const currentTitle = useMemo(() => {
-        const match = matches.find(match => match.handle?.title);
+        const match = matches.find(m => m.handle?.title);
         return match?.handle?.title || PageTitle;
     }, [matches]);
 
@@ -42,10 +43,7 @@ function AppLayout() {
             }
         }}>
 
-            <Box sx={{
-                gridArea: 'header',
-                height: `${HeaderHeight}px`
-            }}>
+            <Box sx={{ gridArea: 'header', height: `${HeaderHeight}px` }}>
                 <Header onMenuClick={handleDrawerToggle} title={currentTitle} />
             </Box>
 

@@ -10,15 +10,17 @@ import {
     useMediaQuery,
 } from '@mui/material';
 import { NavLink,useLocation } from 'react-router';
-import { navItems } from '../Routers/main_R';
 import { menuWidth } from "../theme_params.jsx";
+import {navItems} from "../Routers/main_R.jsx";
+
 
 const NavBar = ({ mobileOpen, onClose }) => {
     const theme = useTheme();
     const location = useLocation();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     
-   
+
+
     // console.log(location.pathname);
     const drawerContent = (
         <Box sx={{ height: '100%' }}>

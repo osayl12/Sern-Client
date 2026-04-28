@@ -8,10 +8,7 @@ function Footer() {
             variant="footer"
             component="footer"
             sx={{
-                position: 'fixed',
-                bottom: 0,
-                width: '100%',
-                height: FooterHeight,
+                height: '100%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
