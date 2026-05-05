@@ -1,4 +1,4 @@
-//npm install react-router  @mui/material @emotion/react @emotion/styled @mui/icons-material   stylis-plugin-rtl @emotion/cache material-ui-confirm 
+//npm install react-router  @mui/material @emotion/react @emotion/styled @mui/icons-material   stylis-plugin-rtl @emotion/cache material-ui-confirm  @tanstack/react-query 
 import './App.css'
 
 import { RouterProvider} from 'react-router';
