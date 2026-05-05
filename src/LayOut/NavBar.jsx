@@ -2,7 +2,7 @@ import React from 'react';
 import {
     Drawer,
     List,
-    ListItem,
+    ListItemButton,
     ListItemIcon,
     ListItemText,
     Box,
@@ -28,8 +28,7 @@ const NavBar = ({ mobileOpen, onClose }) => {
                 {navItems.map((item) => {
                     const isSelected = (location.pathname === item.path);
                     return (
-                        <ListItem
-                        button
+                        <ListItemButton
                         key={item.path}
                         selected={location.pathname === item.path}
                         component={NavLink}
@@ -58,7 +57,7 @@ const NavBar = ({ mobileOpen, onClose }) => {
                             {item.icon}
                         </ListItemIcon>
                         <ListItemText primary={item.name}/>
-                    </ListItem>
+                    </ListItemButton>
                     )
                 })}
             </List>
